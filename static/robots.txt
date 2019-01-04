@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://minimal-blog.netlify.com/sitemap.xml
