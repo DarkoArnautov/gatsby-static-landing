@@ -9,13 +9,13 @@ exports.onCreateNode = ({ node, actions }) => {
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+      slug = `/blog/${_.kebabCase(node.frontmatter.slug)}`;
     }
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      slug = `/blog/${_.kebabCase(node.frontmatter.title)}`;
     }
     createNodeField({ node, name: 'slug', value: slug });
   }
